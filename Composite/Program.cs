@@ -58,7 +58,6 @@ namespace Composite
             }
         }
 
-
         static void Main(string[] args)
         {
             Developer dev1 = new CPPDeveloper();
