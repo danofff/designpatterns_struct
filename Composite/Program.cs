@@ -61,6 +61,25 @@ namespace Composite
 
         static void Main(string[] args)
         {
+            Developer dev1 = new CPPDeveloper();
+            Developer dev2 = new JavaDeveloper();
+
+            TeamComposite team1 = new TeamComposite("FaceBook mobile team");
+            team1.AddDeveloper(dev1);
+            team1.AddDeveloper(dev2);
+            team1.WriteCode();
+
+            TeamComposite team2 = new TeamComposite("FaceBook desktop team");
+            team2.AddDeveloper(dev1);
+
+            TeamComposite company = new TeamComposite("FaceBook");
+            company.AddDeveloper(team1);
+            company.AddDeveloper(team2);
+
+            company.WriteCode();
+            
+
+            Console.ReadKey();
         }
     }
 }
